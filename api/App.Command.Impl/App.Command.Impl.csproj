@@ -76,6 +76,10 @@
       <Project>{31F025BA-25F0-45EE-907E-AFEF5B46E77D}</Project>
       <Name>App.Context</Name>
     </ProjectReference>
+    <ProjectReference Include="..\App.Event\App.Event.csproj">
+      <Project>{6AA214AF-9650-4C32-ACA2-A4B0BC625289}</Project>
+      <Name>App.Event</Name>
+    </ProjectReference>
     <ProjectReference Include="..\App.Repository\App.Repository.csproj">
       <Project>{44db0641-ef31-4a87-bde5-fb32a2b6a170}</Project>
       <Name>App.Repository</Name>

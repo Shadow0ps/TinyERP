@@ -11,6 +11,7 @@
     using App.Entity.Support;
     using App.Entity.Inventory;
     using Aggregate.Order;
+    using ValueObject.Order;
 
     public class AppDbContext : App.Common.Data.MSSQL.MSSQLDbContext
     {
