@@ -9,7 +9,7 @@
     public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class, IBaseEntity<System.Guid>
     {
         public IDbSet<TEntity> DbSet { get; protected set; }
-        public BaseRepository(IMSSQLDbContext context)
+        public BaseRepository(IDbContext context)
         {
             this.DbSet = context.GetDbSet<TEntity>();
         }

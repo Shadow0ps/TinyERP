@@ -5,6 +5,7 @@
     using System;
     using Common.Logging;
     using Common.DI;
+    using Query.Order;
 
     public class OrderEventHandler : IOrderEventHandler
     {
@@ -16,6 +17,8 @@
 
         public void Execute(OnOrderCreated ev)
         {
+            IOrderQuery query = IoC.Container.Resolve<IOrderQuery>();
+            query.CreateOrder(ev.OrderId);
             this.logger.Info("OnOrderCreated:{0}", ev.OrderId);
         }
 

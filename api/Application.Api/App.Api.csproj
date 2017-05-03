@@ -278,6 +278,18 @@
       <Project>{6aa214af-9650-4c32-aca2-a4b0bc625289}</Project>
       <Name>App.Event</Name>
     </ProjectReference>
+    <ProjectReference Include="..\App.Query.Entity\App.Query.Entity.csproj">
+      <Project>{e99a0615-4f5c-4150-baf6-e6a0475ef180}</Project>
+      <Name>App.Query.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Query.Impl\App.Query.Impl.csproj">
+      <Project>{a7dcff43-ee80-4451-832e-9afe73aa2139}</Project>
+      <Name>App.Query.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Query\App.Query.csproj">
+      <Project>{3ca1adb0-a50e-41e1-95eb-2ea6463931c6}</Project>
+      <Name>App.Query</Name>
+    </ProjectReference>
     <ProjectReference Include="..\App.Repository.Impl\App.Repository.Impl.csproj">
       <Project>{c17cf1e1-9b4e-4b53-9493-d2f39ee31a45}</Project>
       <Name>App.Repository.Impl</Name>

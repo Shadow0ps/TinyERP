@@ -1,0 +1,5 @@
+INFO  2017-05-03 22:36:51,665    59ms DefaultLogger          Info               - New request started: /
+INFO  2017-05-03 22:36:51,784   177ms DefaultLogger          Info               - New request started: /
+INFO  2017-05-03 22:36:51,822   215ms DefaultLogger          Info               - New request Ended: /
+INFO  2017-05-03 22:36:51,854   247ms DefaultLogger          Info               - New request Ended: /
+INFO  2017-05-03 22:38:00,449 68842ms DefaultLogger          Info               - New request started: /api/orders

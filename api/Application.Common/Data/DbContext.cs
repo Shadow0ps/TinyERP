@@ -1,5 +1,6 @@
 ﻿namespace App.Common.Data
 {
+    using System;
     using System.Collections.Generic;
 
     public delegate void OnContextSaveChange(IDbContext context);
@@ -27,6 +28,11 @@
             {
                 ev(this);
             }
+        }
+
+        public virtual IDbSet<TEntity> GetDbSet<TEntity>() where TEntity : class, IBaseEntity<System.Guid>
+        {
+            throw new NotImplementedException();
         }
     }
 }

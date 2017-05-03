@@ -162,6 +162,7 @@
     <Compile Include="Application\ConsoleApplication.cs" />
     <Compile Include="Data\BaseContent.cs" />
     <Compile Include="Data\BaseContentRepository.cs" />
+    <Compile Include="Data\BaseQueryRepository.cs" />
     <Compile Include="Data\BaseRepository.cs" />
     <Compile Include="Data\ConnectionString.cs" />
     <Compile Include="Data\DbContext.cs">
@@ -177,6 +178,10 @@
     <Compile Include="Data\IDbSet.cs" />
     <Compile Include="Data\IUnitOfWork.cs" />
     <Compile Include="Data\KeyNamePair.cs" />
+    <Compile Include="Data\MongoDB\IMongoDbContext.cs" />
+    <Compile Include="Data\MongoDB\MongoConnectionString.cs" />
+    <Compile Include="Data\MongoDB\MongoDbContext.cs" />
+    <Compile Include="Data\MongoDB\MongoDbSet.cs" />
     <Compile Include="Data\MSSQL\MSSQLDbSet.cs" />
     <Compile Include="Data\MSSQL\IMSSQLDbContext.cs" />
     <Compile Include="Data\MSSQL\MSSQLConnectionString.cs" />
