@@ -1,9 +1,9 @@
-﻿namespace App.Aggregate.Order
+﻿namespace App.ValueObject.Order
 {
     using App.Common.Data;
-    public class CustomerDetail : BaseEntity
+    public class OrderCustomerDetail : BaseEntity
     {
-        public CustomerDetail(string name)
+        public OrderCustomerDetail(string name)
         {
             this.Name = name;
         }

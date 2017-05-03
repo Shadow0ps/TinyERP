@@ -8,6 +8,7 @@
     using Context;
     using Repository.Order;
     using Common.DI;
+    using Event.Order;
 
     public class OrderCommandHandler : IOrderCommandHandler
     {
@@ -22,6 +23,7 @@
                 IOrderRepository repository = IoC.Container.Resolve<IOrderRepository>(uow);
                 repository.Add(order);
                 uow.Commit();
+                order.AddEvent(new OnOrderCreated(order.Id));
             }
             order.PublishEvents();
         }

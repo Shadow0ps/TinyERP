@@ -1,4 +1,4 @@
-﻿namespace App.Aggregate.Order
+﻿namespace App.ValueObject.Order
 {
     using App.Common.Data;
     public class OrderLine : BaseEntity

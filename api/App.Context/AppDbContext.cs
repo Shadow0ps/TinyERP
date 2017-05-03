@@ -16,7 +16,7 @@
     {
         /*Order*/
         public System.Data.Entity.DbSet<OrderAggregate> OrderAggregates { get; set; }
-        public System.Data.Entity.DbSet<CustomerDetail> CustomerDetails { get; set; }
+        public System.Data.Entity.DbSet<OrderCustomerDetail> CustomerDetails { get; set; }
         public System.Data.Entity.DbSet<OrderLine> OrderLines { get; set; }
 
         public System.Data.Entity.DbSet<FileUpload> FileUploads { get; set; }

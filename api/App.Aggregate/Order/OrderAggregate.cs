@@ -2,13 +2,12 @@
 {
     using App.Common.Aggregate;
     using System.Collections.Generic;
-    using Common.Event;
-    using System;
     using Event.Order;
+    using ValueObject.Order;
 
     public class OrderAggregate : BaseAggregateRoot
     {
-        public CustomerDetail CustomerDetail { get; set; }
+        public OrderCustomerDetail CustomerDetail { get; set; }
         public IList<OrderLine> OrderLines { get; set; }
         public OrderAggregate()
         {
@@ -26,7 +25,7 @@
         }
         public void AddCustomerDetail(App.Command.Order.CustomerDetail customerDetail)
         {
-            this.CustomerDetail = new CustomerDetail(customerDetail.Name);
+            this.CustomerDetail = new OrderCustomerDetail(customerDetail.Name);
             this.AddEvent(new OnCustomerDetailChanged(this.Id, customerDetail.Name));
         }
     }

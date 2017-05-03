@@ -182,7 +182,8 @@
         REST
     }
 
-    public enum CommandHandlerStategyType {
+    public enum CommandHandlerStategyType
+    {
         External,
         InApp
     }
@@ -191,5 +192,13 @@
     {
         External,
         InApp
+    }
+    public enum EventPriority
+    {
+        Low = 5,
+        Normal = 10,
+        Medium = 50,
+        High = 100,
+        Critical = 1000
     }
 }

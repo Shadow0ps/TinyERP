@@ -4,7 +4,8 @@
     using App.Event.Order;
     public interface IOrderEventHandler: 
         IEventHandler<OnCustomerDetailChanged>,
-        IEventHandler<OnOrderLineItemAdded>
+        IEventHandler<OnOrderLineItemAdded>,
+        IEventHandler<OnOrderCreated>
     {
     }
 }
