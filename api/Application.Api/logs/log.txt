@@ -178,3 +178,154 @@ INFO  2017-05-04 14:50:24,902    60ms DefaultLogger          Info               
 INFO  2017-05-04 14:51:24,440    62ms DefaultLogger          Info               - New request started: /api/orders/3f632d23-9ef9-482e-8f36-1c4ca01cbf1b/orderLines
 INFO  2017-05-04 14:52:05,055 40677ms DefaultLogger          Info               - OnOrderLineItemAdded:14.0
 INFO  2017-05-04 14:52:05,149 40771ms DefaultLogger          Info               - New request Ended: /api/orders/3f632d23-9ef9-482e-8f36-1c4ca01cbf1b/orderLines
+ERROR 2017-05-04 16:28:56,191    82ms DefaultLogger          Error              - System.Data.SqlClient.SqlException (0x80131904): Cannot drop database "MyERP" because it is currently in use.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.SqlServer.SqlProviderServices.<>c__DisplayClass30.<DropDatabase>b__2e(DbConnection conn)
+   at System.Data.Entity.SqlServer.SqlProviderServices.UsingConnection(DbConnection sqlConnection, Action`1 act)
+   at System.Data.Entity.SqlServer.SqlProviderServices.UsingMasterConnection(DbConnection sqlConnection, Action`1 act)
+   at System.Data.Entity.SqlServer.SqlProviderServices.DropDatabase(SqlConnection sqlConnection, Nullable`1 commandTimeout, String databaseName)
+   at System.Data.Entity.SqlServer.SqlProviderServices.DbDeleteDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+   at System.Data.Entity.Core.Common.DbProviderServices.DeleteDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+   at System.Data.Entity.Core.Objects.ObjectContext.DeleteDatabase()
+   at System.Data.Entity.Internal.DatabaseOperations.Delete(ObjectContext objectContext)
+   at System.Data.Entity.Database.Delete()
+   at System.Data.Entity.DropCreateDatabaseIfModelChanges`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at App.Common.Data.BaseContentRepository`1.GetByKey(String key) in F:\projects\TinyERP\api\Application.Common\Data\BaseContentRepository.cs:line 13
+   at App.Service.Impl.Setting.ContentTypeService.CreateIfNotExist(IList`1 request) in F:\projects\TinyERP\api\App.Service.Impl\Setting\ContentTypeService.cs:line 73
+   at App.Api.Features.Share.Tasks.CreateContentTypesTask.Execute(TaskArgument`1 context) in F:\projects\TinyERP\api\Application.Api\Features\Share\Tasks\Data\CreateContentTypesTask.cs:line 25
+   at App.Common.Helpers.AssemblyHelper.RunTasksInOrder[TaskType,ContextType](IEnumerable`1 tasks, ContextType context) in F:\projects\TinyERP\api\Application.Common\Helpers\AssemblyHelper.cs:line 57
+   at App.Common.Helpers.AssemblyHelper.ExecuteTasks[TaskType,ContextType](ContextType context, Boolean runTasksInOrder) in F:\projects\TinyERP\api\Application.Common\Helpers\AssemblyHelper.cs:line 34
+   at App.Common.Application.BaseApplication`1.OnApplicationStarted() in F:\projects\TinyERP\api\Application.Common\Application\BaseApplication.cs:line 20
+   at App.Common.Application.WebApiApplication.OnApplicationStarted() in F:\projects\TinyERP\api\Application.Common\Application\WebApiApplication.cs:line 19
+   at App.Api.WebApiApplication.Application_Start() in F:\projects\TinyERP\api\Application.Api\Global.asax.cs:line 13
+ClientConnectionId:aef8d34c-ac8e-4f3e-9476-041c4760d991
+Error Number:3702,State:4,Class:16
+ERROR 2017-05-04 16:29:43,525    77ms DefaultLogger          Error              - System.Data.SqlClient.SqlException (0x80131904): Cannot drop database "MyERP" because it is currently in use.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.SqlServer.SqlProviderServices.<>c__DisplayClass30.<DropDatabase>b__2e(DbConnection conn)
+   at System.Data.Entity.SqlServer.SqlProviderServices.UsingConnection(DbConnection sqlConnection, Action`1 act)
+   at System.Data.Entity.SqlServer.SqlProviderServices.UsingMasterConnection(DbConnection sqlConnection, Action`1 act)
+   at System.Data.Entity.SqlServer.SqlProviderServices.DropDatabase(SqlConnection sqlConnection, Nullable`1 commandTimeout, String databaseName)
+   at System.Data.Entity.SqlServer.SqlProviderServices.DbDeleteDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+   at System.Data.Entity.Core.Common.DbProviderServices.DeleteDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+   at System.Data.Entity.Core.Objects.ObjectContext.DeleteDatabase()
+   at System.Data.Entity.Internal.DatabaseOperations.Delete(ObjectContext objectContext)
+   at System.Data.Entity.Database.Delete()
+   at System.Data.Entity.DropCreateDatabaseIfModelChanges`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at App.Common.Data.BaseContentRepository`1.GetByKey(String key) in F:\projects\TinyERP\api\Application.Common\Data\BaseContentRepository.cs:line 13
+   at App.Service.Impl.Setting.ContentTypeService.CreateIfNotExist(IList`1 request) in F:\projects\TinyERP\api\App.Service.Impl\Setting\ContentTypeService.cs:line 73
+   at App.Api.Features.Share.Tasks.CreateContentTypesTask.Execute(TaskArgument`1 context) in F:\projects\TinyERP\api\Application.Api\Features\Share\Tasks\Data\CreateContentTypesTask.cs:line 25
+   at App.Common.Helpers.AssemblyHelper.RunTasksInOrder[TaskType,ContextType](IEnumerable`1 tasks, ContextType context) in F:\projects\TinyERP\api\Application.Common\Helpers\AssemblyHelper.cs:line 57
+   at App.Common.Helpers.AssemblyHelper.ExecuteTasks[TaskType,ContextType](ContextType context, Boolean runTasksInOrder) in F:\projects\TinyERP\api\Application.Common\Helpers\AssemblyHelper.cs:line 34
+   at App.Common.Application.BaseApplication`1.OnApplicationStarted() in F:\projects\TinyERP\api\Application.Common\Application\BaseApplication.cs:line 20
+   at App.Common.Application.WebApiApplication.OnApplicationStarted() in F:\projects\TinyERP\api\Application.Common\Application\WebApiApplication.cs:line 19
+   at App.Api.WebApiApplication.Application_Start() in F:\projects\TinyERP\api\Application.Api\Global.asax.cs:line 13
+ClientConnectionId:bfeb569a-696c-477c-97d4-7a3c82e5ab41
+Error Number:3702,State:4,Class:16
+ERROR 2017-05-04 16:30:41,649    79ms DefaultLogger          Error              - System.Data.SqlClient.SqlException (0x80131904): Cannot drop database "MyERP" because it is currently in use.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<NonQuery>b__0(DbCommand t, DbCommandInterceptionContext`1 c)
+   at System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   at System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.NonQuery(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   at System.Data.Entity.SqlServer.SqlProviderServices.<>c__DisplayClass30.<DropDatabase>b__2e(DbConnection conn)
+   at System.Data.Entity.SqlServer.SqlProviderServices.UsingConnection(DbConnection sqlConnection, Action`1 act)
+   at System.Data.Entity.SqlServer.SqlProviderServices.UsingMasterConnection(DbConnection sqlConnection, Action`1 act)
+   at System.Data.Entity.SqlServer.SqlProviderServices.DropDatabase(SqlConnection sqlConnection, Nullable`1 commandTimeout, String databaseName)
+   at System.Data.Entity.SqlServer.SqlProviderServices.DbDeleteDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+   at System.Data.Entity.Core.Common.DbProviderServices.DeleteDatabase(DbConnection connection, Nullable`1 commandTimeout, StoreItemCollection storeItemCollection)
+   at System.Data.Entity.Core.Objects.ObjectContext.DeleteDatabase()
+   at System.Data.Entity.Internal.DatabaseOperations.Delete(ObjectContext objectContext)
+   at System.Data.Entity.Database.Delete()
+   at System.Data.Entity.DropCreateDatabaseIfModelChanges`1.InitializeDatabase(TContext context)
+   at System.Data.Entity.Internal.InternalContext.<>c__DisplayClassf`1.<CreateInitializationAction>b__e()
+   at System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   at System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   at System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   at System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   at System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   at System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   at System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   at System.Data.Entity.Internal.Linq.InternalSet`1.get_InternalContext()
+   at System.Data.Entity.Infrastructure.DbQuery`1.System.Linq.IQueryable.get_Provider()
+   at System.Linq.Queryable.FirstOrDefault[TSource](IQueryable`1 source, Expression`1 predicate)
+   at App.Common.Data.BaseContentRepository`1.GetByKey(String key) in F:\projects\TinyERP\api\Application.Common\Data\BaseContentRepository.cs:line 13
+   at App.Service.Impl.Setting.ContentTypeService.CreateIfNotExist(IList`1 request) in F:\projects\TinyERP\api\App.Service.Impl\Setting\ContentTypeService.cs:line 73
+   at App.Api.Features.Share.Tasks.CreateContentTypesTask.Execute(TaskArgument`1 context) in F:\projects\TinyERP\api\Application.Api\Features\Share\Tasks\Data\CreateContentTypesTask.cs:line 25
+   at App.Common.Helpers.AssemblyHelper.RunTasksInOrder[TaskType,ContextType](IEnumerable`1 tasks, ContextType context) in F:\projects\TinyERP\api\Application.Common\Helpers\AssemblyHelper.cs:line 57
+   at App.Common.Helpers.AssemblyHelper.ExecuteTasks[TaskType,ContextType](ContextType context, Boolean runTasksInOrder) in F:\projects\TinyERP\api\Application.Common\Helpers\AssemblyHelper.cs:line 34
+   at App.Common.Application.BaseApplication`1.OnApplicationStarted() in F:\projects\TinyERP\api\Application.Common\Application\BaseApplication.cs:line 20
+   at App.Common.Application.WebApiApplication.OnApplicationStarted() in F:\projects\TinyERP\api\Application.Common\Application\WebApiApplication.cs:line 19
+   at App.Api.WebApiApplication.Application_Start() in F:\projects\TinyERP\api\Application.Api\Global.asax.cs:line 13
+ClientConnectionId:392bda23-91b9-437c-ba44-e1ffa93501dc
+Error Number:3702,State:4,Class:16
+INFO  2017-05-04 16:31:13,669    72ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 16:31:16,639  3042ms DefaultLogger          Info               - OnOrderCreated:8f2aea96-b18a-4d93-b22a-e5e23cdde43b
+INFO  2017-05-04 16:31:16,767  3170ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 16:31:19,381  5784ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 16:31:19,474  5877ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 16:32:12,376 58779ms DefaultLogger          Info               - New request started: /api/orders/96ea2a8f-8ab1-934d-b22a-e5e23cdde43b/activate
+INFO  2017-05-04 16:32:33,539 79942ms DefaultLogger          Info               - New request Ended: /api/orders/96ea2a8f-8ab1-934d-b22a-e5e23cdde43b/activate
+INFO  2017-05-04 16:32:59,482 105885ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 16:33:02,109 108512ms DefaultLogger          Info               - OnOrderCreated:6ab7e9a1-ed04-423c-b644-8627c238ad72
+INFO  2017-05-04 16:33:02,112 108515ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 16:33:05,451 111855ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 16:33:05,483 111886ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 16:34:13,685 180088ms DefaultLogger          Info               - New request started: /api/orders/a1e9b76a-04ed-3c42-b644-8627c238ad72/activate
+INFO  2017-05-04 16:35:37,370 263773ms DefaultLogger          Info               - New request Ended: /api/orders/a1e9b76a-04ed-3c42-b644-8627c238ad72/activate
+INFO  2017-05-04 16:36:23,491 309895ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 16:36:46,783 333186ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 16:36:55,238 341642ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 17:11:49,746    59ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 17:11:52,625  2937ms DefaultLogger          Info               - OnOrderCreated:24677a33-d1dd-4f1d-b924-56823cf782c6
+INFO  2017-05-04 17:11:52,686  2998ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 17:11:52,690  3002ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 17:11:52,767  3079ms DefaultLogger          Info               - New request Ended: /api/orders

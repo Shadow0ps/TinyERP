@@ -12,6 +12,13 @@
     {
         public OrderQuery():base(new MongoDbContext()){}
 
+        public void ActivateOrder(Guid orderId)
+        {
+            App.Query.Entity.Order.Order order = this.DbSet.AsQueryable().FirstOrDefault(item => item.OrderId == orderId);
+            order.IsActivated = true;
+            this.DbSet.Update(order);
+        }
+
         public void AddOrderLineItem(Guid orderId, decimal price)
         {
             App.Query.Entity.Order.Order order = this.DbSet.AsQueryable().FirstOrDefault(item => item.OrderId == orderId);

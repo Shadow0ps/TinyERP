@@ -8,6 +8,7 @@
 
     public class OrderAggregate : BaseAggregateRoot
     {
+        public bool IsActivated { get; set; }
         public OrderCustomerDetail CustomerDetail { get; set; }
         public IList<OrderLine> OrderLines { get; set; }
         public OrderAggregate()
@@ -22,6 +23,13 @@
                 this.AddOrderLineItem(item.Price);
             }
         }
+
+        public void Activate()
+        {
+            this.IsActivated = true;
+            this.AddEvent(new OnOrderActivated(this.Id));
+        }
+
         public void AddCustomerDetail(App.Command.Order.CustomerDetail customerDetail)
         {
             this.CustomerDetail = new OrderCustomerDetail(customerDetail.Name);

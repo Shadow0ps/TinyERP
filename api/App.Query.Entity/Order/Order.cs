@@ -9,6 +9,7 @@
     {
         public Guid OrderId { get; set; }
         public string Name { get; set; }
+        public bool IsActivated { get; set; }
         public IList<OrderLine> OrderLines { get; set; }
         public OrderCustomerDetail Customer { get; set; }
 

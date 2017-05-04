@@ -15,6 +15,13 @@
             this.logger = IoC.Container.Resolve<ILogger>();
         }
 
+        public void Execute(OnOrderActivated ev)
+        {
+            IOrderQuery query = IoC.Container.Resolve<IOrderQuery>();
+            query.ActivateOrder(ev.OrderId);
+            this.logger.Info("OnOrderActivated:{0}", ev.OrderId);
+        }
+
         public void Execute(OnOrderCreated ev)
         {
             IOrderQuery query = IoC.Container.Resolve<IOrderQuery>();

@@ -13,11 +13,21 @@
 
     public class OrderCommandHandler : IOrderCommandHandler
     {
+        public void Handle(ActivateOrder command)
+        {
+            using (IUnitOfWork uow = new UnitOfWork(new AppDbContext(IOMode.Write)))
+            {
+                IOrderRepository repository = IoC.Container.Resolve<IOrderRepository>(uow);
+                OrderAggregate order = repository.GetById(command.OrderId.ToString(), "OrderLines");
+                order.Activate();
+                repository.Update(order);
+                uow.Commit();
+                order.PublishEvents();
+            }
+        }
+
         public void Handle(AddOrderLineRequest command)
         {
-            //OrderAggregate order = AggregateFactory.Create<OrderAggregate>();
-            //order.AddCustomerDetail(command.CustomerDetail);
-            
             using (IUnitOfWork uow = new UnitOfWork(new AppDbContext(IOMode.Write)))
             {
                 IOrderRepository repository = IoC.Container.Resolve<IOrderRepository>(uow);
@@ -25,7 +35,6 @@
                 order.AddOrderLineItem(command.Price);
                 repository.Update(order);
                 uow.Commit();
-                //order.AddEvent(new OnOrderCreated(order.Id));
                 order.PublishEvents();
             }
         }

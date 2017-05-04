@@ -5,7 +5,8 @@
     public interface IOrderEventHandler: 
         IEventHandler<OnCustomerDetailChanged>,
         IEventHandler<OnOrderLineItemAdded>,
-        IEventHandler<OnOrderCreated>
+        IEventHandler<OnOrderCreated>,
+        IEventHandler<OnOrderActivated>
     {
     }
 }
