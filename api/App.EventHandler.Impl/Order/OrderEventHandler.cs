@@ -31,6 +31,8 @@
 
         public void Execute(OnCustomerDetailChanged ev)
         {
+            IOrderQuery query = IoC.Container.Resolve<IOrderQuery>();
+            query.UpdateCustomerDetail(ev.OrderId, ev.CustomerName);
             this.logger.Info("OnCustomerDetailChanged:{0}", ev.CustomerName);
         }
     }

@@ -145,3 +145,18 @@ INFO  2017-05-04 14:20:56,129   719ms DefaultLogger          Info               
 INFO  2017-05-04 14:20:56,135   725ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
 INFO  2017-05-04 14:20:56,192   782ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
 INFO  2017-05-04 14:20:56,273   863ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 14:25:32,382    60ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 14:25:33,010   688ms DefaultLogger          Info               - OnOrderCreated:65bf3387-ae3d-4924-8da4-66cfb52b6216
+INFO  2017-05-04 14:25:33,074   753ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 14:25:33,077   755ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 14:25:33,153   831ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 14:29:24,967    64ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 14:29:25,613   710ms DefaultLogger          Info               - OnOrderCreated:e2dd054c-e2f6-4e94-abdf-8521a715ebf4
+INFO  2017-05-04 14:29:25,675   772ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 14:29:25,678   775ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 14:29:25,757   854ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 14:31:36,600    55ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 14:31:37,224   679ms DefaultLogger          Info               - OnOrderCreated:b2f5501a-ac93-4261-9d5a-5c8c721ed7df
+INFO  2017-05-04 14:31:37,285   740ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 14:31:37,289   744ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 14:31:37,363   818ms DefaultLogger          Info               - New request Ended: /api/orders
