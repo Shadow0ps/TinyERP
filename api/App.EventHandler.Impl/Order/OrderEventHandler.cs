@@ -24,6 +24,8 @@
 
         public void Execute(OnOrderLineItemAdded ev)
         {
+            IOrderQuery query = IoC.Container.Resolve<IOrderQuery>();
+            query.AddOrderLineItem(ev.OrderId, ev.Price);
             this.logger.Info("OnOrderLineItemAdded:{0}", ev.Price);
         }
 

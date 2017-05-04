@@ -19,6 +19,10 @@
             return dbset;
         }
 
+        public void Save<TEntity>(TEntity item) where TEntity : class {
+            base.Save(item, ConcurrentSaveOptions.OverwriteServerChanges);
+        }
+
         public int SaveChanges()
         {
             return 0;

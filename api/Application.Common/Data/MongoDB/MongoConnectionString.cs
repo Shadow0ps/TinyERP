@@ -8,12 +8,21 @@
         }
         public override string ToString()
         {
-            return string.Format(
-                "mongodb://{3}:{4}@{0}:{1}/{2}", 
+            if (string.IsNullOrWhiteSpace(this.UserName))
+            {
+                return string.Format(
+                "mongodb://{0}:{1}/{2}",
                 this.Server,
                 this.Port,
-                this.Database, 
-                this.UserName, 
+                this.Database
+                );
+            }
+            return string.Format(
+                "mongodb://{3}:{4}@{0}:{1}/{2}",
+                this.Server,
+                this.Port,
+                this.Database,
+                this.UserName,
                 this.Password
                 );
         }
