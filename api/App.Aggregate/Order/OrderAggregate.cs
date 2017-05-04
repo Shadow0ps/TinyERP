@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using Event.Order;
     using ValueObject.Order;
+    using System;
 
     public class OrderAggregate : BaseAggregateRoot
     {
@@ -18,15 +19,20 @@
         {
             foreach (App.Command.Order.OrderLine item in orderLines)
             {
-                OrderLine orderLine = new OrderLine(item.Price);
-                this.OrderLines.Add(orderLine);
-                this.AddEvent(new OnOrderLineItemAdded(this.Id, orderLine.Price));
+                this.AddOrderLineItem(item.Price);
             }
         }
         public void AddCustomerDetail(App.Command.Order.CustomerDetail customerDetail)
         {
             this.CustomerDetail = new OrderCustomerDetail(customerDetail.Name);
             this.AddEvent(new OnCustomerDetailChanged(this.Id, customerDetail.Name));
+        }
+
+        public void AddOrderLineItem(decimal price)
+        {
+            OrderLine orderLine = new OrderLine(price);
+            this.OrderLines.Add(orderLine);
+            this.AddEvent(new OnOrderLineItemAdded(this.Id, price));
         }
     }
 }

@@ -9,9 +9,27 @@
     using Repository.Order;
     using Common.DI;
     using Event.Order;
+    using System;
 
     public class OrderCommandHandler : IOrderCommandHandler
     {
+        public void Handle(AddOrderLineRequest command)
+        {
+            //OrderAggregate order = AggregateFactory.Create<OrderAggregate>();
+            //order.AddCustomerDetail(command.CustomerDetail);
+            
+            using (IUnitOfWork uow = new UnitOfWork(new AppDbContext(IOMode.Write)))
+            {
+                IOrderRepository repository = IoC.Container.Resolve<IOrderRepository>(uow);
+                OrderAggregate order = repository.GetById(command.OrderId.ToString(), "OrderLines");
+                order.AddOrderLineItem(command.Price);
+                repository.Update(order);
+                uow.Commit();
+                //order.AddEvent(new OnOrderCreated(order.Id));
+                order.PublishEvents();
+            }
+        }
+
         public void Handle(CreateOrderRequest command)
         {
 

@@ -5,6 +5,7 @@
     using App.Common.MVC.Attributes;
     using System.Web.Http;
     using Aggregate.Order;
+    using System;
 
     [RoutePrefix("api/orders")]
     public class OrdersController : CommandHandlerController<OrderAggregate>
@@ -14,6 +15,15 @@
         [ResponseWrapper()]
         public void CreateOrder(CreateOrderRequest request)
         {
+            this.Execute(request);
+        }
+
+        [Route("{orderId}/orderLines")]
+        [HttpPost()]
+        [ResponseWrapper()]
+        public void AddOrderLine(Guid orderId, AddOrderLineRequest request)
+        {
+            request.OrderId = orderId;
             this.Execute(request);
         }
     }

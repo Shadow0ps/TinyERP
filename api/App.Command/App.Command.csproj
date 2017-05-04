@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Order\AddOrderLineRequest.cs" />
     <Compile Include="Order\CreateOrderRequest.cs" />
     <Compile Include="Order\IOrderCommandHandler.cs" />
     <Compile Include="Order\OrderDetail.cs" />

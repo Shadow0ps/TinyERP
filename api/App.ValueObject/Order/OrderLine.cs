@@ -3,6 +3,7 @@
     using App.Common.Data;
     public class OrderLine : BaseEntity
     {
+        public OrderLine(){}
         public OrderLine(decimal price)
         {
             this.Price = price;
