@@ -4,14 +4,12 @@
     using global::MongoDB.Bson.Serialization.Attributes;
     using global::MongoDB.Kennedy;
     using System;
-    using System.ComponentModel;
 
     public class BaseMongoDbEntity : IBaseEntity<ObjectId>, IMongoEntity
     {
-
         public ObjectId Id { get; set; }
         public string _accessId { get; set; }
-        public ObjectId _id { get; set; }
+        public ObjectId _id { get { return this.Id; } }
         public DateTime CreatedDate { get; set; }
         public BaseMongoDbEntity()
         {

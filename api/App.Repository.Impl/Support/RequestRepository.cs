@@ -4,8 +4,9 @@
     using App.Common.Data.MSSQL;
     using App.Context;
     using App.Repository.Support;
+    using System;
 
-    internal class RequestRepository : BaseRepository<App.Entity.Support.Request>, IRequestRepository
+    internal class RequestRepository : BaseCommandRepository<App.Entity.Support.Request>, IRequestRepository
     {
         public RequestRepository() : base(new AppDbContext())
         {

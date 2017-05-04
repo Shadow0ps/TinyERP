@@ -4,7 +4,7 @@
     using System.Linq;
     using System.Data.Entity.Infrastructure;
 
-    public class MSSQLDbSet<TEntity> : DbSet<TEntity> where TEntity : class, IBaseEntity<Guid>
+    public class MSSQLDbSet<TEntity, TId> : DbSet<TEntity> where TEntity : class, IBaseEntity<TId>
     {
         public System.Data.Entity.DbSet<TEntity> DbSet { get; protected set; }
         public new App.Common.Data.MSSQL.IMSSQLDbContext Context { get; protected set; }
@@ -47,7 +47,7 @@
 
         public override TEntity Get(string id, string includes = "")
         {
-            Guid itemId = new Guid(id);
+            //TId itemId = new Guid(id);
             DbQuery<TEntity> query = this.GetDbSet();
             if (!string.IsNullOrWhiteSpace(includes))
             {
@@ -58,7 +58,7 @@
                 }
             }
 
-            return query.FirstOrDefault(item => item.Id == itemId);
+            return query.FirstOrDefault(item => item.Id.ToString() == id);
         }
 
         public override void Update(TEntity item)
@@ -84,7 +84,7 @@
         {
         }
 
-        private object[] GetEntityKey<T>(System.Data.Entity.DbContext context, T entity) where T : class, IBaseEntity<Guid>
+        private object[] GetEntityKey<T>(System.Data.Entity.DbContext context, T entity) where T : class, IBaseEntity<TId>
         {
             var oc = ((IObjectContextAdapter)context).ObjectContext;
             var keys = oc.MetadataWorkspace.GetEntityContainer(oc.DefaultContainerName, System.Data.Entity.Core.Metadata.Edm.DataSpace.CSpace)

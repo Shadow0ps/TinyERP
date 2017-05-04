@@ -17,7 +17,7 @@
         public Order(Guid orderId):this()
         {
             this.OrderId = orderId;
-            this.Id=orderId;
+            //this.Id=orderId;
         }
     }
 }

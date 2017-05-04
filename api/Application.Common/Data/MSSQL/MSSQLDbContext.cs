@@ -28,9 +28,9 @@
                 ev(this);
             }
         }
-        public IDbSet<TEntity> GetDbSet<TEntity>() where TEntity : class, IBaseEntity<System.Guid>
+        public IDbSet<TEntity> GetDbSet<TEntity, TId>() where TEntity : class, IBaseEntity<TId>
         {
-            IDbSet<TEntity> dbset = new App.Common.Data.MSSQL.MSSQLDbSet<TEntity>(this, this.context, this.Mode);
+            IDbSet<TEntity> dbset = new App.Common.Data.MSSQL.MSSQLDbSet<TEntity, TId>(this, this.context, this.Mode);
             return dbset;
         }
     }

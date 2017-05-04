@@ -160,6 +160,7 @@
     <Compile Include="Connector\JsonContent.cs" />
     <Compile Include="Connector\RESTConnector.cs" />
     <Compile Include="Application\ConsoleApplication.cs" />
+    <Compile Include="Data\BaseCommandRepository.cs" />
     <Compile Include="Data\BaseContent.cs" />
     <Compile Include="Data\BaseContentRepository.cs" />
     <Compile Include="Data\BaseQueryRepository.cs" />

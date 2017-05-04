@@ -10,7 +10,7 @@
     using App.Common.DI;
     using App.Repository.Common;
 
-    internal class UserRepository : BaseRepository<User>, IUserRepository
+    internal class UserRepository : BaseCommandRepository<User>, IUserRepository
     {
         public UserRepository() : base(new App.Context.AppDbContext(App.Common.IOMode.Read))
         {

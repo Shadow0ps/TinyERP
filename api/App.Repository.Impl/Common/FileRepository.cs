@@ -11,7 +11,7 @@
     using System.Linq;
     using AutoMapper.QueryableExtensions;
 
-    internal class FileRepository : BaseRepository<FileUpload>, IFileRepository
+    internal class FileRepository : BaseCommandRepository<FileUpload>, IFileRepository
     {
         public FileRepository() : base(new AppDbContext(IOMode.Read))
         {

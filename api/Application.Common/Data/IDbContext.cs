@@ -2,7 +2,7 @@
 {
     public interface IDbContext
     {
-        IDbSet<TEntity> GetDbSet<TEntity>() where TEntity : class, IBaseEntity<System.Guid>;
+        IDbSet<TEntity> GetDbSet<TEntity, TId>() where TEntity : class, IBaseEntity<TId>;
         int SaveChanges();
         void RegisterSaveChangeEvent(OnContextSaveChange ev);
         void OnSaveChanged();

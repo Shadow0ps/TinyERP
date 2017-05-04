@@ -2,7 +2,7 @@
 {
     using global::MongoDB.Bson;
     using System.Linq;
-    public class MongoDbSet<TEntity> : DbSet<TEntity> where TEntity : class, IBaseEntity<System.Guid>
+    public class MongoDbSet<TEntity, TId> : DbSet<TEntity> where TEntity : class, IBaseEntity<TId>
     {
         public IQueryable<TEntity> Collection { get; protected set; }
         public new IMongoDbContext Context { get; protected set; }

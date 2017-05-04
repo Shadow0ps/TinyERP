@@ -6,12 +6,12 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class, IBaseEntity<System.Guid>
+    public class BaseRepository<TEntity, TId> : IBaseRepository<TEntity> where TEntity : class, IBaseEntity<TId>
     {
         public IDbSet<TEntity> DbSet { get; protected set; }
         public BaseRepository(IDbContext context)
         {
-            this.DbSet = context.GetDbSet<TEntity>();
+            this.DbSet = context.GetDbSet<TEntity, TId>();
         }
 
         public virtual TEntity GetById(string id, string includes = "")

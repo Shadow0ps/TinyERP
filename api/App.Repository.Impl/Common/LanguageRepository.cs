@@ -7,7 +7,7 @@
     using App.Common.Data.MSSQL;
     using System.Linq;
 
-    internal class LanguageRepository : BaseRepository<Language>, ILanguageRepository
+    internal class LanguageRepository : BaseCommandRepository<Language>, ILanguageRepository
     {
         public LanguageRepository() : base(new App.Context.AppDbContext(App.Common.IOMode.Read))
         {

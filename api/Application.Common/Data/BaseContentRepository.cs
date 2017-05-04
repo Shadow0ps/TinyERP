@@ -2,7 +2,7 @@
 {
     using System.Linq;
 
-    public class BaseContentRepository<TEntity> : BaseRepository<TEntity>, IBaseContentRepository<TEntity> where TEntity : class, IBaseContent
+    public class BaseContentRepository<TEntity> : BaseCommandRepository<TEntity>, IBaseContentRepository<TEntity> where TEntity : class, IBaseContent
     {
         public BaseContentRepository(App.Common.Data.MSSQL.IMSSQLDbContext context) : base(context)
         {

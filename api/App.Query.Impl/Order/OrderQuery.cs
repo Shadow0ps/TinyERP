@@ -14,9 +14,9 @@
         public void AddOrderLineItem(Guid orderId, decimal price)
         {
             App.Query.Entity.Order.Order order = this.DbSet.AsQueryable().FirstOrDefault(item => item.OrderId == orderId);
-            this.DbSet.Delete(order._id.ToString());
+//            this.DbSet.Delete(order._id.ToString());
             order.OrderLines.Add(new OrderLine(orderId, price));
-            this.DbSet.Add(order);
+            this.DbSet.Update(order);
         }
         public void CreateOrder(Guid orderId)
         {

@@ -12,15 +12,15 @@
         {
         }
         public MongoDbContext() : this(new MongoConnectionString()) { }
-        public IDbSet<TEntity> GetDbSet<TEntity>() where TEntity : class, IBaseEntity<System.Guid>
+        public IDbSet<TEntity> GetDbSet<TEntity, TId>() where TEntity : class, IBaseEntity<TId>
         {
             IQueryable<TEntity> collection = this.GetCollection<TEntity>();
-            IDbSet<TEntity> dbset = new MongoDbSet<TEntity>(this, collection);
+            IDbSet<TEntity> dbset = new MongoDbSet<TEntity, TId>(this, collection);
             return dbset;
         }
 
         public void Save<TEntity>(TEntity item) where TEntity : class {
-            base.Save(item, ConcurrentSaveOptions.OverwriteServerChanges);
+            base.Save(item);
         }
 
         public int SaveChanges()
