@@ -113,7 +113,7 @@
             using (IUnitOfWork uow = new UnitOfWork(new AppDbContext(IOMode.Write)))
             {
                 ICategoryRepository categoryRepository = IoC.Container.Resolve<ICategoryRepository>(uow);
-                categoryRepository.Delete(id.ToString());
+                categoryRepository.Delete(id);
                 uow.Commit();
             }
         }

@@ -30,7 +30,7 @@
             }
         }
 
-        public virtual IDbSet<TEntity> GetDbSet<TEntity, TId>() where TEntity : class, IBaseEntity<TId>
+        public virtual IDbSet<TEntity, TId> GetDbSet<TEntity, TId>() where TEntity : class, IBaseEntity<TId>
         {
             throw new NotImplementedException();
         }

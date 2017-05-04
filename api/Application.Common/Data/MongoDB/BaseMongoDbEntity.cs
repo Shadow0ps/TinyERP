@@ -1,7 +1,6 @@
 ﻿namespace App.Common.Data.MongoDB
 {
     using global::MongoDB.Bson;
-    using global::MongoDB.Bson.Serialization.Attributes;
     using global::MongoDB.Kennedy;
     using System;
 

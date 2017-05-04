@@ -4,7 +4,7 @@
     using System.Linq;
     using System.Data.Entity.Infrastructure;
 
-    public class MSSQLDbSet<TEntity, TId> : DbSet<TEntity> where TEntity : class, IBaseEntity<TId>
+    public class MSSQLDbSet<TEntity, TId> : DbSet<TEntity, TId> where TEntity : class, IBaseEntity<TId>
     {
         public System.Data.Entity.DbSet<TEntity> DbSet { get; protected set; }
         public new App.Common.Data.MSSQL.IMSSQLDbContext Context { get; protected set; }
@@ -39,9 +39,9 @@
             this.DbSet.Add(item);
         }
 
-        public override void Delete(string id)
+        public override void Delete(TId id)
         {
-            TEntity entity = this.Get(id);
+            TEntity entity = this.Get(id.ToString());
             this.DbSet.Remove(entity);
         }
 

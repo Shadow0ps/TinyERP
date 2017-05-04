@@ -4,12 +4,12 @@
     using App.Common.Paging;
     using System.Collections.Generic;
 
-    public interface IBaseRepository<TEntity>
+    public interface IBaseRepository<TEntity, TId>
     {
         TEntity GetById(string id, string includes = "");
         TResult GetById<TResult>(string id) where TResult : IMappedFrom<TEntity>;
         void Add(TEntity item);
-        void Delete(string id);
+        void Delete(TId id);
         void Update(TEntity item);
         IList<TResult> GetItems<TResult>(string include = "") where TResult : IMappedFrom<TEntity>;
         IPagingData<TResult> GetAll<TResult, SearchRequestType>(IPagingRequest<SearchRequestType> request) where TResult : IMappedFrom<TEntity>;

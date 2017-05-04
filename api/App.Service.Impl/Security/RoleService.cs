@@ -87,7 +87,7 @@
             {
                 IRoleRepository repository = IoC.Container.Resolve<IRoleRepository>(uow);
                 DeleteRoleResponse deleteResponse = repository.GetById<DeleteRoleResponse>(id.ToString());
-                repository.Delete(id.ToString());
+                repository.Delete(id);
                 uow.Commit();
                 return deleteResponse;
             }

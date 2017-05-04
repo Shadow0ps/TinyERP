@@ -84,7 +84,7 @@
             using (IUnitOfWork uow = new UnitOfWork(new AppDbContext(IOMode.Write)))
             {
                 IContentTypeRepository repo = IoC.Container.Resolve<IContentTypeRepository>(uow);
-                repo.Delete(id.ToString());
+                repo.Delete(id);
                 uow.Commit();
             }
         }
@@ -127,7 +127,7 @@
             foreach (Parameter param in currentParams)
             {
                 if (parameters.Any(item => item.Id == param.Id)) { continue; }
-                paramRepo.Delete(param.Id.ToString());
+                paramRepo.Delete(param.Id);
             }
 
             foreach (Parameter param in currentParams)

@@ -170,6 +170,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Data\DbSet.cs" />
+    <Compile Include="Data\IBaseCommandRepository.cs" />
     <Compile Include="Data\IBaseContent.cs" />
     <Compile Include="Data\IBaseContentRepository.cs" />
     <Compile Include="Data\IBaseEntity.cs" />

@@ -6,9 +6,9 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    public class BaseRepository<TEntity, TId> : IBaseRepository<TEntity> where TEntity : class, IBaseEntity<TId>
+    public class BaseRepository<TEntity, TId> : IBaseRepository<TEntity, TId> where TEntity : class, IBaseEntity<TId>
     {
-        public IDbSet<TEntity> DbSet { get; protected set; }
+        public IDbSet<TEntity, TId> DbSet { get; protected set; }
         public BaseRepository(IDbContext context)
         {
             this.DbSet = context.GetDbSet<TEntity, TId>();
@@ -40,7 +40,7 @@
             this.DbSet.Add(item);
         }
 
-        public virtual void Delete(string id)
+        public virtual void Delete(TId id)
         {
             this.DbSet.Delete(id);
         }

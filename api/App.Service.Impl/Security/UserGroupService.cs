@@ -57,7 +57,7 @@
             using (IUnitOfWork uow = new App.Common.Data.UnitOfWork(new App.Context.AppDbContext(IOMode.Write)))
             {
                 IUserGroupRepository repository = IoC.Container.Resolve<IUserGroupRepository>(uow);
-                repository.Delete(id.ToString());
+                repository.Delete(id);
                 uow.Commit();
             }
         }

@@ -5,7 +5,7 @@
     using App.Common.Data;
     using App.Entity.Common;
 
-    public interface IFileRepository : IBaseRepository<FileUpload>
+    public interface IFileRepository : IBaseCommandRepository<FileUpload>
     {
         IList<TEntity> GetByIds<TEntity>(IList<Guid> ids);
     }

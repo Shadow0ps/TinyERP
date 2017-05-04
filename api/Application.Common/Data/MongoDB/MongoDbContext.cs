@@ -3,6 +3,7 @@
     using System.Linq;
     using System.Collections.Generic;
     using global::MongoDB.Kennedy;
+    using global::MongoDB.Bson;
 
     public class MongoDbContext : ConcurrentDataContext, IMongoDbContext
     {
@@ -12,15 +13,21 @@
         {
         }
         public MongoDbContext() : this(new MongoConnectionString()) { }
-        public IDbSet<TEntity> GetDbSet<TEntity, TId>() where TEntity : class, IBaseEntity<TId>
+        public IDbSet<TEntity, TId> GetDbSet<TEntity, TId>() where TEntity : class, IBaseEntity<TId>
         {
             IQueryable<TEntity> collection = this.GetCollection<TEntity>();
-            IDbSet<TEntity> dbset = new MongoDbSet<TEntity, TId>(this, collection);
+            IDbSet<TEntity, TId> dbset = new MongoDbSet<TEntity, TId>(this, collection);
             return dbset;
         }
 
-        public void Save<TEntity>(TEntity item) where TEntity : class {
+        public void Save<TEntity>(TEntity item) where TEntity : class
+        {
             base.Save(item);
+        }
+        public void Delete<TEntity, TId>(TId id)
+        {
+            ObjectId itemId = new ObjectId(id.ToString());
+            base.Delete<TEntity>(itemId);
         }
 
         public int SaveChanges()

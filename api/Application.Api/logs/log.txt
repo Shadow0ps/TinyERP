@@ -90,3 +90,58 @@ INFO  2017-05-04 13:42:18,147 62208ms DefaultLogger          Info               
 INFO  2017-05-04 13:42:22,736 66797ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
 INFO  2017-05-04 13:42:34,538 78599ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
 INFO  2017-05-04 13:42:34,639 78700ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 13:44:17,165    62ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 13:44:21,367  4264ms DefaultLogger          Info               - OnOrderCreated:f22381ea-8630-4ece-8010-003d175097d3
+INFO  2017-05-04 13:44:21,373  4270ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 13:44:23,811  6709ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 13:44:23,899  6797ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 13:44:31,479 14377ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 13:44:31,526 14423ms DefaultLogger          Info               - OnOrderCreated:d628368f-5e38-47c3-a0bd-b78157f565b1
+INFO  2017-05-04 13:44:31,526 14424ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 13:44:31,528 14425ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 13:44:31,555 14453ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 13:44:39,335 22233ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 13:44:39,391 22288ms DefaultLogger          Info               - OnOrderCreated:1ff39466-cb6d-40ea-98a9-23eeea9a7186
+INFO  2017-05-04 13:44:39,391 22289ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 13:44:39,393 22290ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 13:44:39,420 22317ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 13:44:39,941 22838ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 13:44:39,996 22894ms DefaultLogger          Info               - OnOrderCreated:e8fc5122-da48-4a75-80fd-ca94b1201493
+INFO  2017-05-04 13:44:39,997 22894ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 13:44:39,998 22896ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 13:44:40,025 22922ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 13:44:40,461 23358ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 13:44:40,500 23398ms DefaultLogger          Info               - OnOrderCreated:52dfa140-5bff-450a-af29-0e6b7d0fd8ff
+INFO  2017-05-04 13:44:40,501 23399ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 13:44:40,503 23400ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 13:44:40,528 23426ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 13:44:40,902 23800ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 13:44:40,956 23854ms DefaultLogger          Info               - OnOrderCreated:2fc30d25-34ea-4fb6-8f8a-91288e263794
+INFO  2017-05-04 13:44:40,957 23855ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 13:44:40,959 23856ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 13:44:40,987 23884ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 13:44:41,378 24275ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 13:44:41,429 24326ms DefaultLogger          Info               - OnOrderCreated:ddca15dd-6f9d-481c-a847-5c42aa1942ff
+INFO  2017-05-04 13:44:41,429 24327ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 13:44:41,431 24329ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 13:44:41,457 24355ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 13:44:41,852 24750ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 13:44:41,894 24792ms DefaultLogger          Info               - OnOrderCreated:cb526423-2cc8-4687-bbcc-535a005ebc13
+INFO  2017-05-04 13:44:41,895 24792ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 13:44:41,896 24794ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 13:44:41,926 24823ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 13:44:42,444 25341ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 13:44:42,486 25383ms DefaultLogger          Info               - OnOrderCreated:2138adb6-2b6e-420d-a2d5-52b291bfdbb4
+INFO  2017-05-04 13:44:42,486 25384ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 13:44:42,488 25385ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 13:44:42,512 25410ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 13:44:42,964 25861ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 13:44:43,023 25920ms DefaultLogger          Info               - OnOrderCreated:3b465bb1-e08a-44bb-b3f4-25f383339fdc
+INFO  2017-05-04 13:44:43,023 25921ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 13:44:43,025 25923ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 13:44:43,052 25949ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-04 14:20:55,469    58ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-04 14:20:56,129   719ms DefaultLogger          Info               - OnOrderCreated:e0f064f6-d469-435f-b549-a6d66b010145
+INFO  2017-05-04 14:20:56,135   725ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-04 14:20:56,192   782ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-04 14:20:56,273   863ms DefaultLogger          Info               - New request Ended: /api/orders

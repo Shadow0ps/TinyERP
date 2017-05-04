@@ -82,7 +82,7 @@
             using (IUnitOfWork uow = new UnitOfWork(new AppDbContext(IOMode.Write)))
             {
                 IPermissionRepository perRepo = IoC.Container.Resolve<IPermissionRepository>(uow);
-                perRepo.Delete(id.ToString());
+                perRepo.Delete(id);
                 uow.Commit();
             }
         }

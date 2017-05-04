@@ -1,5 +1,5 @@
 ﻿namespace App.Repository.Order
 {
     using App.Common.Data;
-    public interface IOrderRepository : IBaseRepository<App.Aggregate.Order.OrderAggregate>{}
+    public interface IOrderRepository : IBaseCommandRepository<App.Aggregate.Order.OrderAggregate>{}
 }
