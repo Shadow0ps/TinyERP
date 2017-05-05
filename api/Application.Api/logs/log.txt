@@ -329,3 +329,134 @@ INFO  2017-05-04 17:11:52,625  2937ms DefaultLogger          Info               
 INFO  2017-05-04 17:11:52,686  2998ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
 INFO  2017-05-04 17:11:52,690  3002ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
 INFO  2017-05-04 17:11:52,767  3079ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 10:04:43,103    73ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-05 10:06:30,007 106977ms DefaultLogger          Info               - OnOrderCreated:d1bd905f-d820-4869-83f1-14d7890f7664
+INFO  2017-05-05 10:07:32,575 169544ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-05 10:07:33,953 170923ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-05 10:07:34,061 171031ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 10:09:22,293 279263ms DefaultLogger          Info               - New request started: /api/orders/D1BD905F-D820-4869-83F1-14D7890F7664/activate
+INFO  2017-05-05 10:11:11,548 388518ms DefaultLogger          Info               - New request Ended: /api/orders/D1BD905F-D820-4869-83F1-14D7890F7664/activate
+INFO  2017-05-05 10:11:14,891 391860ms DefaultLogger          Info               - New request started: /api/orders/D1BD905F-D820-4869-83F1-14D7890F7664/activate
+INFO  2017-05-05 10:14:49,864    69ms DefaultLogger          Info               - New request started: /api/orders/D1BD905F-D820-4869-83F1-14D7890F7664/activate
+INFO  2017-05-05 10:15:30,050    60ms DefaultLogger          Info               - New request started: /api/orders/D1BD905F-D820-4869-83F1-14D7890F7664/activate
+INFO  2017-05-05 10:16:14,786 44796ms DefaultLogger          Info               - OnOrderActivated:d1bd905f-d820-4869-83f1-14d7890f7664
+INFO  2017-05-05 10:16:15,945 45956ms DefaultLogger          Info               - New request Ended: /api/orders/D1BD905F-D820-4869-83F1-14D7890F7664/activate
+INFO  2017-05-05 10:23:48,343    71ms DefaultLogger          Info               - New request started: /api/orders/D1BD905F-D820-4869-83F1-14D7890F7664/activate
+INFO  2017-05-05 10:23:49,034   763ms DefaultLogger          Info               - OnOrderActivated:d1bd905f-d820-4869-83f1-14d7890f7664
+INFO  2017-05-05 10:23:49,233   962ms DefaultLogger          Info               - New request Ended: /api/orders/D1BD905F-D820-4869-83F1-14D7890F7664/activate
+INFO  2017-05-05 10:24:27,597 39326ms DefaultLogger          Info               - New request started: /api/orders/D1BD905F-D820-4869-83F1-14D7890F7664/activate
+INFO  2017-05-05 10:24:27,606 39335ms DefaultLogger          Info               - OnOrderActivated:d1bd905f-d820-4869-83f1-14d7890f7664
+INFO  2017-05-05 10:24:27,616 39345ms DefaultLogger          Info               - New request Ended: /api/orders/D1BD905F-D820-4869-83F1-14D7890F7664/activate
+INFO  2017-05-05 10:26:15,524    85ms DefaultLogger          Info               - New request started: /api/orders/D1BD905F-D820-4869-83F1-14D7890F7664/activate
+INFO  2017-05-05 10:26:16,254   814ms DefaultLogger          Info               - OnOrderActivated:d1bd905f-d820-4869-83f1-14d7890f7664
+INFO  2017-05-05 10:26:16,456  1016ms DefaultLogger          Info               - New request Ended: /api/orders/D1BD905F-D820-4869-83F1-14D7890F7664/activate
+INFO  2017-05-05 10:29:59,127    71ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-05 10:29:59,784   728ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 10:30:07,916  8860ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-05 10:30:07,933  8877ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 10:31:05,129    71ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-05 10:31:05,772   714ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 10:32:14,125 69067ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-05 10:33:09,397 124339ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 10:33:39,119    71ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-05 10:33:39,780   732ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 10:33:45,600  6552ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-05 10:33:45,612  6564ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 10:34:03,593 24545ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-05 10:34:46,953 67905ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 10:40:43,675    72ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-05 10:40:44,336   732ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 10:41:14,993 31390ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-05 10:41:59,992 76388ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 10:44:45,891    71ms DefaultLogger          Info               - New request started: /api/orders
+ERROR 2017-05-05 10:44:46,473   652ms DefaultLogger          Error              - System.InvalidOperationException: common.event.handlerTypeForEventIsRequired ---> Castle.MicroKernel.ComponentNotFoundException: No component for supporting the service App.Common.Event.IEventHandler`1[[App.Event.Order.OnOrderCreated, App.Event, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] was found
+   at Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   at App.Common.DI.Castle.CastleContainer.Resolve(Type type) in F:\projects\TinyERP\api\Application.Common\DI\Castle\CastleContainer.cs:line 101
+   at App.Common.Event.Strategy.InAppEventHandlerStategy.Publish[TEventType](TEventType ev) in F:\projects\TinyERP\api\Application.Common\Event\Strategy\InAppEventHandlerStategy.cs:line 14
+   --- End of inner exception stack trace ---
+   at App.Common.Event.Strategy.InAppEventHandlerStategy.Publish[TEventType](TEventType ev) in F:\projects\TinyERP\api\Application.Common\Event\Strategy\InAppEventHandlerStategy.cs:line 23
+   at App.Common.Event.EventManagerStrategy.Publish[TEventType](TEventType ev) in F:\projects\TinyERP\api\Application.Common\Event\EventManagerStrategy.cs:line 12
+   at App.Common.Aggregate.BaseAggregateRoot.PublishEvents() in F:\projects\TinyERP\api\Application.Common\Aggregate\BaseAggregateRoot.cs:line 22
+   at App.Command.Impl.Order.OrderCommandHandler.Handle(CreateOrderRequest command) in F:\projects\TinyERP\api\App.Command.Impl\Order\OrderCommandHandler.cs:line 55
+   at App.Common.Command.Handlers.InAppCommandHandlerStategy.Execute[TCommand](TCommand command) in F:\projects\TinyERP\api\Application.Common\Command\Handlers\InAppCommandHandlerStategy.cs:line 15
+   at App.Common.Command.CommandHandlerController`1.Execute[TCommand](TCommand command) in F:\projects\TinyERP\api\Application.Common\Command\CommandHandlerController.cs:line 13
+   at App.Api.Features.Order.OrdersController.CreateOrder(CreateOrderRequest request) in F:\projects\TinyERP\api\Application.Api\Features\Order\OrdersController.cs:line 19
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClassc.<GetExecutor>b__6(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+INFO  2017-05-05 10:44:46,567   747ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 10:47:28,417    72ms DefaultLogger          Info               - New request started: /api/orders
+ERROR 2017-05-05 10:47:28,998   654ms DefaultLogger          Error              - System.InvalidOperationException: common.event.handlerTypeForEventIsRequired ---> Castle.MicroKernel.ComponentNotFoundException: No component for supporting the service App.Common.Event.IEventHandler`1[[App.Event.Order.OnOrderCreated, App.Event, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] was found
+   at Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   at App.Common.DI.Castle.CastleContainer.Resolve(Type type) in F:\projects\TinyERP\api\Application.Common\DI\Castle\CastleContainer.cs:line 101
+   at App.Common.Event.Strategy.InAppEventHandlerStategy.Publish[TEventType](TEventType ev) in F:\projects\TinyERP\api\Application.Common\Event\Strategy\InAppEventHandlerStategy.cs:line 14
+   --- End of inner exception stack trace ---
+   at App.Common.Event.Strategy.InAppEventHandlerStategy.Publish[TEventType](TEventType ev) in F:\projects\TinyERP\api\Application.Common\Event\Strategy\InAppEventHandlerStategy.cs:line 23
+   at App.Common.Event.EventManagerStrategy.Publish[TEventType](TEventType ev) in F:\projects\TinyERP\api\Application.Common\Event\EventManagerStrategy.cs:line 12
+   at App.Common.Aggregate.BaseAggregateRoot.PublishEvents() in F:\projects\TinyERP\api\Application.Common\Aggregate\BaseAggregateRoot.cs:line 22
+   at App.Command.Impl.Order.OrderCommandHandler.Handle(CreateOrderRequest command) in F:\projects\TinyERP\api\App.Command.Impl\Order\OrderCommandHandler.cs:line 55
+   at App.Common.Command.Handlers.InAppCommandHandlerStategy.Execute[TCommand](TCommand command) in F:\projects\TinyERP\api\Application.Common\Command\Handlers\InAppCommandHandlerStategy.cs:line 15
+   at App.Common.Command.CommandHandlerController`1.Execute[TCommand](TCommand command) in F:\projects\TinyERP\api\Application.Common\Command\CommandHandlerController.cs:line 13
+   at App.Api.Features.Order.OrdersController.CreateOrder(CreateOrderRequest request) in F:\projects\TinyERP\api\Application.Api\Features\Order\OrdersController.cs:line 19
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClassc.<GetExecutor>b__6(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+INFO  2017-05-05 10:47:29,098   754ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 10:49:29,547   101ms DefaultLogger          Info               - New request started: /api/orders
+ERROR 2017-05-05 10:51:12,679 103233ms DefaultLogger          Error              - System.InvalidOperationException: common.event.handlerTypeForEventIsRequired ---> Castle.MicroKernel.ComponentNotFoundException: No component for supporting the service App.Common.Event.IEventHandler`1[[App.Event.Order.OnOrderCreated, App.Event, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] was found
+   at Castle.MicroKernel.DefaultKernel.Castle.MicroKernel.IKernelInternal.Resolve(Type service, IDictionary arguments, IReleasePolicy policy)
+   at App.Common.DI.Castle.CastleContainer.Resolve(Type type) in F:\projects\TinyERP\api\Application.Common\DI\Castle\CastleContainer.cs:line 101
+   at App.Common.Event.Strategy.InAppEventHandlerStategy.Publish[TEventType](TEventType ev) in F:\projects\TinyERP\api\Application.Common\Event\Strategy\InAppEventHandlerStategy.cs:line 14
+   --- End of inner exception stack trace ---
+   at App.Common.Event.Strategy.InAppEventHandlerStategy.Publish[TEventType](TEventType ev) in F:\projects\TinyERP\api\Application.Common\Event\Strategy\InAppEventHandlerStategy.cs:line 23
+   at App.Common.Event.EventManagerStrategy.Publish[TEventType](TEventType ev) in F:\projects\TinyERP\api\Application.Common\Event\EventManagerStrategy.cs:line 12
+   at App.Common.Aggregate.BaseAggregateRoot.PublishEvents() in F:\projects\TinyERP\api\Application.Common\Aggregate\BaseAggregateRoot.cs:line 22
+   at App.Command.Impl.Order.OrderCommandHandler.Handle(CreateOrderRequest command) in F:\projects\TinyERP\api\App.Command.Impl\Order\OrderCommandHandler.cs:line 55
+   at App.Common.Command.Handlers.InAppCommandHandlerStategy.Execute[TCommand](TCommand command) in F:\projects\TinyERP\api\Application.Common\Command\Handlers\InAppCommandHandlerStategy.cs:line 15
+   at App.Common.Command.CommandHandlerController`1.Execute[TCommand](TCommand command) in F:\projects\TinyERP\api\Application.Common\Command\CommandHandlerController.cs:line 13
+   at App.Api.Features.Order.OrdersController.CreateOrder(CreateOrderRequest request) in F:\projects\TinyERP\api\Application.Api\Features\Order\OrdersController.cs:line 19
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClassc.<GetExecutor>b__6(Object instance, Object[] methodParameters)
+   at System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Web.Http.Filters.ActionFilterAttribute.<CallOnActionExecutedAsync>d__5.MoveNext()
+INFO  2017-05-05 10:51:12,811 103365ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 10:51:45,829    72ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-05 10:51:46,689   931ms DefaultLogger          Info               - OnOrderCreated:d9476976-ddc6-4a75-9244-f850507d6895
+INFO  2017-05-05 10:51:46,786  1028ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-05 10:51:46,793  1036ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-05 10:51:46,879  1121ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 10:52:17,248    71ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-05 10:52:18,082   905ms DefaultLogger          Info               - OnOrderCreated:67380d57-321e-4f37-b641-4c54c0983c3a
+INFO  2017-05-05 10:52:18,184  1006ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-05 10:52:18,190  1012ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-05 10:52:18,280  1103ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 11:05:59,233    72ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-05 11:06:00,079   918ms DefaultLogger          Info               - OnOrderCreated:f3214b0d-1629-4a72-9ae9-097dad70ac7b
+INFO  2017-05-05 11:06:00,175  1014ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-05 11:06:00,180  1019ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-05 11:06:00,278  1117ms DefaultLogger          Info               - New request Ended: /api/orders
+INFO  2017-05-05 11:06:04,311  5150ms DefaultLogger          Info               - New request started: /api/orders
+INFO  2017-05-05 11:06:04,319  5158ms DefaultLogger          Info               - OnOrderCreated:7337db89-0180-4129-aa27-7eca3ca3d559
+INFO  2017-05-05 11:06:04,321  5161ms DefaultLogger          Info               - OnCustomerDetailChanged:this customer name
+INFO  2017-05-05 11:06:04,324  5163ms DefaultLogger          Info               - OnOrderLineItemAdded:10.0
+INFO  2017-05-05 11:06:04,333  5173ms DefaultLogger          Info               - New request Ended: /api/orders

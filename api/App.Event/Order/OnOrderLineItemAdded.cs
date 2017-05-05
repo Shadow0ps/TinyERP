@@ -12,12 +12,5 @@
             this.OrderId = orderId;
             this.Price = price;
         }
-        public override Type HandlerType
-        {
-            get
-            {
-                return typeof(IEventHandler<OnOrderLineItemAdded>);
-            }
-        }
     }
 }
