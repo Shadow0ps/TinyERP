@@ -2,7 +2,6 @@
 {
     using Event.Order;
     using App.EventHandler.Order;
-    using System;
     using Common.Logging;
     using Common.DI;
     using Query.Order;
