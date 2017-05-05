@@ -42,7 +42,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Order\IOrderQuery.cs" />
+    <Compile Include="Order\OrderSummaryItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\App.Query.Entity\App.Query.Entity.csproj">
+      <Project>{e99a0615-4f5c-4150-baf6-e6a0475ef180}</Project>
+      <Name>App.Query.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Application.Common\App.Common.csproj">
+      <Project>{FA3EAA76-30EC-41FD-B9B1-C46158B9E821}</Project>
+      <Name>App.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

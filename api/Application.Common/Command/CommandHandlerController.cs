@@ -1,6 +1,8 @@
 ﻿namespace App.Common.Command
 {
     using Aggregate;
+    using MVC;
+
     public class CommandHandlerController<TAggregate> : BaseApiController where TAggregate : IBaseAggregateRoot
     {
         private ICommandHandlerStrategy commandHandlerStrategy;

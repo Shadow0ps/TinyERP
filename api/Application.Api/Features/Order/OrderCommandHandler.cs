@@ -8,7 +8,7 @@
     using System;
 
     [RoutePrefix("api/orders")]
-    public class OrdersController : CommandHandlerController<OrderAggregate>
+    public class OrderCommandHandler : CommandHandlerController<OrderAggregate>
     {
 
         [Route("")]

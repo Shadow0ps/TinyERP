@@ -7,6 +7,8 @@
     using App.Query.Entity.Order;
     using System.Linq;
     using ValueObject.Order;
+    using System.Collections.Generic;
+    using Common.Mapping;
 
     public class OrderQuery: BaseQueryRepository<Order>, IOrderQuery
     {
@@ -28,6 +30,11 @@
         public void CreateOrder(Guid orderId)
         {
              this.DbSet.Add(new App.Query.Entity.Order.Order(orderId));
+        }
+
+        public IList<TEntity> GetOrders<TEntity>() where TEntity: IMappedFrom<Order>
+        {
+            return this.GetItems<TEntity>();
         }
 
         public void UpdateCustomerDetail(Guid orderId, string customerName)

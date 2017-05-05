@@ -1,6 +1,6 @@
 ﻿namespace App.Api.Features.Security
 {
-    using App.Common;
+    using App.Common.MVC;
     using App.Common.DI;
     using App.Common.MVC.Attributes;
     using App.Service.Security;

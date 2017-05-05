@@ -1,7 +1,7 @@
 ﻿namespace App.Api.Features.Setting
 {
-    using App.Common;
     using App.Common.DI;
+    using App.Common.MVC;
     using App.Common.MVC.Attributes;
     using App.Service.Setting;
     using System;

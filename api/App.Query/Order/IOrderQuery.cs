@@ -1,11 +1,15 @@
 ﻿namespace App.Query.Order
 {
+    using Common.Mapping;
     using System;
+    using System.Collections.Generic;
+
     public interface IOrderQuery
     {
         void CreateOrder(Guid orderId);
         void AddOrderLineItem(Guid orderId, decimal price);
         void UpdateCustomerDetail(Guid orderId, string customerName);
         void ActivateOrder(Guid orderId);
+        IList<TEntity> GetOrders<TEntity>() where TEntity : IMappedFrom<App.Query.Entity.Order.Order>;
     }
 }
