@@ -21,7 +21,7 @@
     "bower": "^1.7.9",
     "del": "^2.2.0",
     "es6-shim": "^0.35.0",
-    "gulp": "^3.9.1",
+    "gulp": "^5.0.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-filter": "^4.0.0",
     "gulp-htmlmin": "^2.0.0",
