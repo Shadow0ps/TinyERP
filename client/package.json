@@ -54,7 +54,7 @@
     "tslint": "^3.10.2",
     "wrench": "^1.5.9",
     "zone.js": "^0.6.12",
-    "symbol-observable": "1.0.1"
+    "symbol-observable": "1.2.0"
   },
   "devDependencies": {
     "browser-sync": "^2.13.0",
